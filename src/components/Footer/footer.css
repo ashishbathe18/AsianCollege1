@@ -1,6 +1,10 @@
 /* ===== Footer Main ===== */
 .footer {
+<<<<<<< HEAD
   background-color: #000000;   /* Black Background */
+=======
+  background-color: #d65b18;
+>>>>>>> cd4851ba5f606392119c496745c9566c5997942b
   color: #ffffff;
   padding: 40px 60px;
   display: grid;
@@ -69,7 +73,7 @@
 }
 
 .social-icons i:hover {
-  background-color: #ffcc00;
+  background-color: #d36211;
   color: #000;
   transform: scale(1.1);
 }

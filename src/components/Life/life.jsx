@@ -7,7 +7,6 @@ import campusImg from "../../assets/life/life-on-campus.jpg";
 // Facilities Images
 import wifiImg from "../../assets/life/wifi.jpg";
 import hostelImg from "../../assets/life/hostel.jpg";
-import sportsImg from "../../assets/life/sports.jpg";
 import foodImg from "../../assets/life/food.jpg"
 import libraryImg from "../../assets/life/library.jpg"
 const Life = () => {
@@ -45,15 +44,7 @@ const Life = () => {
           </div>
         </div>
 
-        <div className="life-section">
-          <img src={sportsImg} alt="Sports Ground" />
-          <div className="life-content">
-            <h2>SPORTS GROUND</h2>
-            <p>
-            KJEI gymkhana provides the best sport facilities with quality sports equipment’s (indoor and outdoor) within the college campus. Total area of play ground is 22500 sqm. All sports activities are guided through a full time professionally qualified Director for physical education. Annual sports are a regular feature of the annual social gathering and are conducted every year in the month of January. From last year we have started with inter engineering cricket tournament namely ‘ Kalyan Karandak’ and the prizes of 50,000 were distributed. 23 teams of engineering and polytechnic from all over Maharashtra had participated.
-            </p>
-          </div>
-        </div>
+       
          <div className="life-section">
           <img src={foodImg} alt="Sports Ground" />
           <div className="life-content">

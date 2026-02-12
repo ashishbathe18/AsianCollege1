@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
-function academics() {
+function Academics() {
   return (
     <div>
-     ashish
+      <h2>Activities Page</h2>
+      <Outlet />
     </div>
-  )
+  );
 }
 
-export default academics
+export default Academics;

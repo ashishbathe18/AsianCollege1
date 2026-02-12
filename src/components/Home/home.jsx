@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
 import "./home.css";
 import Footer from "../Footer/footer";
-
-
-const images = [
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
-  "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
-];
+import precident from "../../assets/home/president.png"
+import asian from "../../assets/home/asian.png";
+import achive from "../../assets/home/achiv.png";
+import croom from "../../assets/home/croom.png";
+import dance from "../../assets/home/dance.png";
+import swami from "../../assets/home/swami.png";
+import bose from "../../assets/home/bose.png";
+import hero1 from "../../assets/home/hero1.png";
+import hero2 from "../../assets/home/hero2.png";
+import hero3 from "../../assets/home/hero3.png";
+import open from "../../assets/home/open.png";
+import sppu from "../../assets/home/sppu.png";
+import ai from "../../assets/home/ai.png";
+import about from "../../assets/home/about.png"
+import Ai1 from "../../assets/home/Ai1.png";
+import react from "../../assets/home/react.png";
 // 
 
 // 
@@ -38,41 +47,8 @@ const Home = () => {
       prev === 0 ? events.length - 1 : prev - 1
     );
   };
-const images = [
-  "https://images.unsplash.com/photo-1523050854058-8df90110c9f1",
-  "https://images.unsplash.com/photo-1541339907198-e08756dedf3f",
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b"
+const images = [hero1,hero2,hero3
 ];
-
-/* ================= EVENTS DATA ================= */
-const events = [
-  {
-    img: "https://images.unsplash.com/photo-1607746882042-944635dfe10e",
-    date: "19 Jan 2026",
-    title: "Funding Opportunities In Health Sciences",
-    desc: "asian college, Pimpri Pune."
-  },
-  {
-    img: "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b",
-    date: "16 Jan 2026",
-    title: "Prosthodontist Day Celebration",
-    desc: "asian  College "
-  },
-  {
-    img: "https://images.unsplash.com/photo-1515165562835-c4c7b8b3d9f6",
-    date: "16 Jan 2026",
-    title:
-      "Little Luminescence – illuminating Pediatric Prosthodontics",
-    desc: "asian College, Pimpri Pune"
-  },
-  {
-    img: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe",
-    date: "12 Jan 2026",
-    title: "National Youth Day Celebration",
-    desc: "asian College, Pimpri Pune"
-  }
-];
-
 // 
 
 // 
@@ -99,7 +75,7 @@ const events = [
         ))}
 
         <div className="slider-text">
-          <h2>Smart India Hackathon 2024</h2>
+          <h2>Shaping Futures, Building Leaders</h2>
           <p>Proud Moment for Asian College</p>
         </div>
       </div>
@@ -143,10 +119,10 @@ const events = [
             <div className="admission-badge">2025-26</div>
             <h3>ADMISSIONS OPEN</h3>
             <img
-              src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+              src={open}
               alt="student"
             />
-            <div className="enquiry-tab">Enquiry</div>
+           
           </div>
         </div>
       </section>
@@ -154,17 +130,12 @@ const events = [
 <section className="about-wrapper">
   <div className="about-left">
     <img
-      src="https://images.unsplash.com/photo-1580582932707-520aed937b7b"
+      src={about}
       alt="College Building"
       className="about-building"
     />
 
-    <img
-      src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
-      alt="Student"
-      className="about-student"
-    />
-
+  
     {/* <div className="est-year">EST 2003</div> */}
   </div>
 
@@ -173,28 +144,12 @@ const events = [
     <div className="title-line"></div>
 
     <p className="about-text">
-      In 2003,asian college , Pune, was established
-      as a "Deemed-to-be-University" under Section 3 of the UGC Act 1956.
-      Over the years, the Vidyapeeth has grown exponentially and many more
-      constituent Institutions have come into existence under its umbrella.
-    </p>
+    Here is a detailed and professional description you can use for your website or brochure:
 
-    <div className="ranking-section">
-      <div className="rank-card">
-        <span className="rank-number">4th</span>
-        <p>Dental Category</p>
-      </div>
+Asian College has been accredited with a NAAC B+ Grade, recognizing the institution’s commitment to maintaining quality standards in higher education. This accreditation reflects strong performance in key areas such as teaching-learning processes, infrastructure, governance, student support services, research initiatives, and overall institutional development.
 
-      <div className="rank-card">
-        <span className="rank-number">12th</span>
-        <p>Medical Category</p>
-      </div>
-
-      <div className="rank-card">
-        <span className="rank-number">41st</span>
-        <p>University Category</p>
-      </div>
-    </div>
+The B+ grade signifies that the college meets national benchmarks set by the National Assessment and Accreditation Council (NAAC) and continuously strives for academic excellence, innovation, and holistic student growth.
+   Through quality enhancement practices, modern facilities, experienced faculty, and transparent administration, Asian College remains dedicated to delivering value-based and career-oriented education. </p>
   </div>
 
   <div className="enquiry-vertical">Enquiry</div>
@@ -204,7 +159,7 @@ const events = [
 <section className="info-section">
   <div className="info-card">
     <img
-      src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+      src={precident}
       alt="President"
     />
     <div className="info-content">
@@ -221,7 +176,7 @@ const events = [
 
   <div className="info-card">
     <img
-      src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+      src={asian}
       alt="Media"
     />
     <div className="info-content">
@@ -238,7 +193,7 @@ const events = [
 
   <div className="info-card">
     <img
-      src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe"
+      src={achive}
       alt="Achievements"
     />
     <div className="info-content">
@@ -301,29 +256,27 @@ const events = [
 
     <div className="info-body">
       <div className="info-item">
-        <img src="https://via.placeholder.com/80x80" alt="" />
+        <img src={dance} alt="" />
         <div>
-          <h4>Sanvidhan Jagar abhiyan felicitation of teachers</h4>
+          <h4>Annual Gathering 2025-26</h4>
           <p>
-            On account of Mahatma Jyotiba Phule and Dr. Babasaheb Ambedkar Jayanti
-            under Sanvidhan Jagar Abhiyan...
+          Annual Gathering 2025-26 is celebrated with great Enthusiasm and support.
           </p>
         </div>
       </div>
 
       <div className="info-item">
-        <img src="https://via.placeholder.com/80x80" alt="" />
+        <img src={swami} alt="" />
         <div>
-          <h4>Rajmata Jijau and Swami Vivekanand Jayanti</h4>
+          <h4> Swami Vivekanand Jayanti</h4>
           <p>
-            College has celebrated with students view, Elocution competition
-            and Role play activity
+           Swami Vivekananda was a great spiritual leader who introduced Indian philosophy and Vedanta to the Western world.
           </p>
         </div>
       </div>
 
       <div className="info-item">
-        <img src="https://via.placeholder.com/80x80" alt="" />
+        <img src={bose} alt="" />
         <div>
           <h4>Netaji Subhash Chandra Bose Jayanti</h4>
           <p>Celebration of Netaji Subhash Chandra Bose Jayanti</p>
@@ -331,7 +284,7 @@ const events = [
       </div>
     </div>
 
-    <button className="info-footer-btn">Read More</button>
+    <button className="info-footer-btn mt-12">Read More</button>
   </div>
 
   {/* ANNOUNCEMENTS */}
@@ -340,36 +293,33 @@ const events = [
 
     <div className="info-body">
       <div className="info-item">
-        <img src="https://via.placeholder.com/80x100" alt="" />
+        <img src={sppu} alt="" />
         <div>
-          <h4>Certificate Course of React</h4>
-          <p>Start Date: 05/01/2026</p>
+          <h4>SPPU Startup Talk Series</h4>
+          <p>
+SPPU Startup Talk Series
+The Startup Talk Series aims to inspire young minds by sharing real-world entrepreneurial experiences, innovative</p>
         </div>
       </div>
 
       <div className="info-item">
-        <img src="https://via.placeholder.com/80x100" alt="" />
+        <img src={ai} alt="" />
+        <div>
+          <h4>
+Guest Lecture on industrial Knowledge and Practical Exposure in Automative Manufacturing</h4>
+          <p>Guest Speaker: Mr. Sohan Kabade & Mr. Sanket Shikhare Founders of Precision Interface</p>
+        </div>
+      </div>
+
+      <div className="info-item">
+        <img src={Ai1} alt="" />
         <div>
           <h4>Certificate Course of Agentic AI</h4>
           <p>Start Date: 15/12/2025</p>
         </div>
       </div>
 
-      <div className="info-item">
-        <img src="https://via.placeholder.com/80x100" alt="" />
-        <div>
-          <h4>VACANT SEATS</h4>
-          <p>VACANT SEATS</p>
-        </div>
-      </div>
-
-      <div className="info-item">
-        <img src="https://via.placeholder.com/80x100" alt="" />
-        <div>
-          <h4>MERIT LIST OF BBA/BCA</h4>
-          <p>INSTITUTE LEVEL</p>
-        </div>
-      </div>
+   
     </div>
 
     <button className="info-footer-btn">Read More</button>
@@ -414,7 +364,7 @@ const events = [
       </div>
     </div>
 
-    <button className="info-footer-btn">Read More</button>
+    <button className="info-footer-btn mb-8">Read More</button>
   </div>
 
 </section>

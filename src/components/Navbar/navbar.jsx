@@ -83,9 +83,6 @@
 
 
 
-
-
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
@@ -95,11 +92,13 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [studentOpen, setStudentOpen] = useState(false);
+  const [activityOpen, setActivityOpen] = useState(false);
 
   const handleCloseMenu = () => {
     setMobileOpen(false);
     setAboutOpen(false);
     setStudentOpen(false);
+    setActivityOpen(false);
   };
 
   return (
@@ -109,14 +108,6 @@ const Navbar = () => {
         <div className="header-container">
           <div className="left-section">
             <img src={image} alt="Logo" className="logo" />
-            {/* <div className="college-text">
-              <h6>ASIAN COLLEGE OF COMMERCE AND ARTS</h6>
-              <h6>MANAGEMENT & RESEARCH, AKURDI</h6>
-              <p>
-                Accredited by NAAC | ISO 21001:2018 <br />
-                Approved by AICTE | Affiliated to SPPU
-              </p>
-            </div> */}
           </div>
 
           <div
@@ -144,24 +135,12 @@ const Navbar = () => {
           </div>
 
           <div className={`dropdown-menu ${aboutOpen ? "show" : ""}`}>
-            <NavLink to="/about/college" onClick={handleCloseMenu}>
-              The College
-            </NavLink>
-            <NavLink to="/about/presidentDesk" onClick={handleCloseMenu}>
-              President Desk
-            </NavLink>
-            <NavLink to="/about/vision" onClick={handleCloseMenu}>
-              Vision
-            </NavLink>
-            <NavLink to="/about/mission" onClick={handleCloseMenu}>
-              Mission
-            </NavLink>
-            <NavLink to="/about/ourStaff" onClick={handleCloseMenu}>
-              Our Staff
-            </NavLink>
-            <NavLink to="/about/achievements" onClick={handleCloseMenu}>
-              Achievements
-            </NavLink>
+            <NavLink to="/about/college" onClick={handleCloseMenu}>The College</NavLink>
+            <NavLink to="/about/presidentDesk" onClick={handleCloseMenu}>President Desk</NavLink>
+            <NavLink to="/about/vision" onClick={handleCloseMenu}>Vision</NavLink>
+            <NavLink to="/about/mission" onClick={handleCloseMenu}>Mission</NavLink>
+            <NavLink to="/about/ourStaff" onClick={handleCloseMenu}>Our Staff</NavLink>
+            <NavLink to="/about/achievements" onClick={handleCloseMenu}>Achievements</NavLink>
           </div>
         </div>
 
@@ -175,21 +154,28 @@ const Navbar = () => {
           </div>
 
           <div className={`dropdown-menu ${studentOpen ? "show" : ""}`}>
-            <NavLink to="/students/ug" onClick={handleCloseMenu}>
-              UG
-            </NavLink>
-            <NavLink to="/students/pg" onClick={handleCloseMenu}>
-              PG
-            </NavLink>
-            <NavLink to="/students/phd" onClick={handleCloseMenu}>
-              PhD
-            </NavLink>
+            <NavLink to="/students/ug" onClick={handleCloseMenu}>UG</NavLink>
+            <NavLink to="/students/pg" onClick={handleCloseMenu}>PG</NavLink>
+            <NavLink to="/students/phd" onClick={handleCloseMenu}>PhD</NavLink>
           </div>
         </div>
 
-        <NavLink to="/academics" className="menu-btn" onClick={handleCloseMenu}>
-          Academics
-        </NavLink>
+        {/* ACTIVITIES */}
+        <div className="dropdown">
+          <div
+            className="menu-btn"
+            onClick={() => setActivityOpen(!activityOpen)}
+          >
+            Activities ▾
+          </div>
+
+          <div className={`dropdown-menu ${activityOpen ? "show" : ""}`}>
+            <NavLink to="/academics/gallery" onClick={handleCloseMenu}>Gallery</NavLink>
+            <NavLink to="/academics/cultural" onClick={handleCloseMenu}>Post/Blog</NavLink>
+            <NavLink to="/academics/nss" onClick={handleCloseMenu}>NSS</NavLink>
+            <NavLink to="/academics/club" onClick={handleCloseMenu}>Newspaper Publication</NavLink>
+          </div>
+        </div>
 
         <NavLink to="/examination" className="menu-btn" onClick={handleCloseMenu}>
           Examination
@@ -220,4 +206,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

@@ -10,7 +10,6 @@
   height: 100%;
   object-fit: cover;
 }
-
 /* dark overlay for better text visibility */
 .life-container::after {
   content: "";
@@ -21,7 +20,6 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.35);
 }
-
 .life-overlay {
   position: absolute;
   top: 50%;
