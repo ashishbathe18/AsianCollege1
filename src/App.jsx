@@ -38,24 +38,20 @@ function App() {
         <Route path="/about" element={<AboutLayout />}>
           <Route index element={<TheCollege />} />
           <Route path="college" element={<AboutCollegeDrop />} />
-          <Route path="presidentDesk" element={<President/>} />
-          <Route path="vision" element={<Visionpage/>} />
-          <Route path="mission" element={<Missionpage/>} />
-          <Route path="ourStaff" element={<OurStaffpage/>} />
-          <Route path="achievements" element={<AchievementPage/>} />
+          <Route path="presidentDesk" element={<President />} />
+          <Route path="vision" element={<Visionpage />} />
+          <Route path="mission" element={<Missionpage />} />
+          <Route path="ourStaff" element={<OurStaffpage />} />
+          <Route path="achievements" element={<AchievementPage />} />
         </Route>
 
         <Route path="/students" element={<Students />} />
-<<<<<<< HEAD
-=======
 
-        {/* Academics dropdown pages */}
->>>>>>> cd4851ba5f606392119c496745c9566c5997942b
+        {/* Academics Pages */}
         <Route path="/academics" element={<Academics />} />
         <Route path="/academics/cultural" element={<Culture />} />
         <Route path="/academics/nss" element={<Nss />} />
         <Route path="/academics/clubs" element={<Clubs />} />
-        {/* Separate Gallery Page */}
         <Route path="/academics/gallery" element={<Gallery />} />
 
         <Route path="/examination" element={<Examination />} />
