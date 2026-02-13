@@ -49,11 +49,11 @@ const AboutCollege = () => {
             <li className="active">
               <Link to="/about">The College</Link>
             </li>
-            <li><Link to="#">President’s Desk</Link></li>
-            <li><Link to="#">Vision</Link></li>
-            <li><Link to="#">Mission</Link></li>
-            <li><Link to="#">Our Staff</Link></li>
-            <li><Link to="#">Achievements</Link></li>
+            <li><Link to="/about/presidentDesk">President’s Desk</Link></li>
+            <li><Link to="/about/vision">Vision</Link></li>
+            <li><Link to="/about/mission">Mission</Link></li>
+            <li><Link to="/about/ourStaff">Our Staff</Link></li>
+            <li><Link to="/about/achievements">Achievements</Link></li>
           </ul>
         </div>
 

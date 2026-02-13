@@ -57,7 +57,7 @@ const Vision = () => {
         >
           <h3>About</h3>
           <ul>
-            <li><Link to="/about">The College</Link></li>
+            <li><Link to="/about/college">The College</Link></li>
             <li><Link to="/about/president">President’s Desk</Link></li>
             <li className="active"><Link to="#">Vision</Link></li>
             <li><Link to="/about/mission">Mission</Link></li>

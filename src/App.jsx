@@ -25,6 +25,7 @@ import Visionpage from "./components/About/Vision";
 import Missionpage from "./components/About/Mission";
 import OurStaffpage from "./components/About/OurStaff";
 import AchievementPage from "./components/About/Achievements";
+import StaffDetails from "./components/About/StaffDetails";
 
 function App() {
   return (

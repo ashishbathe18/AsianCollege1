@@ -10,8 +10,9 @@ body {
 /* ===== Section Titles ===== */
 .section-title {
   font-size: 28px;
-  color: #2a3f66; /* Deep blue */
-  border-bottom: 3px solid #4a90e2; /* Soft blue underline */
+  color: #263f48; /* Deep blue */
+  
+  border-bottom: 3px solid #263f48; /* Soft blue underline */
   padding-bottom: 8px;
   margin-bottom: 30px;
   font-weight: 700;
@@ -42,7 +43,7 @@ body {
 
 .manual-card {
   padding: 25px 30px;
-  border: 1.5px solid #4a90e2;
+  border: 1.5px solid #263f48;
   border-radius: 10px;
   background-color: #f4f8ff;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -95,7 +96,7 @@ body {
 
 .exam-table th,
 .timetable-table th {
-  background-color: #4a90e2;
+  background-color: #263f48;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;

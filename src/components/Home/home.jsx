@@ -152,7 +152,7 @@ The B+ grade signifies that the college meets national benchmarks set by the Nat
    Through quality enhancement practices, modern facilities, experienced faculty, and transparent administration, Asian College remains dedicated to delivering value-based and career-oriented education. </p>
   </div>
 
-  <div className="enquiry-vertical">Enquiry</div>
+  {/* <div className="enquiry-vertical">Enquiry</div> */}
 </section>
 {/* ================= DPU EVENTS SECTION ================= */}
  {/* ================= INFO CARDS SECTION ================= */}
@@ -210,9 +210,9 @@ The B+ grade signifies that the college meets national benchmarks set by the Nat
 
 
 {/* ================= QUICK LINKS SECTION ================= */}
-<section className="quicklinks-section">
-  <div className="quicklinks-overlay"></div>
-
+{/* <section className="quicklinks-section">
+  <div className="quicklinks-overlay"></div> */}
+{/* 
   <div className="quicklinks-container">
 
     <div className="quick-card">
@@ -240,11 +240,11 @@ The B+ grade signifies that the college meets national benchmarks set by the Nat
       <h3>UGC Public<br />Self-Disclosure</h3>
     </div>
 
-  </div>
+  </div> */}
 
   {/* Enquiry Button */}
-  <div className="quick-enquiry">Enquiry</div>
-</section>
+  {/* <div className="quick-enquiry">Enquiry</div>
+</section> */}
 
 
 {/* ================= NEWS / ANNOUNCEMENTS / UPDATES ================= */}

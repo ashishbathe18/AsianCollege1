@@ -81,8 +81,6 @@
 
 
 
-
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
@@ -94,11 +92,20 @@ const Navbar = () => {
   const [studentOpen, setStudentOpen] = useState(false);
   const [activityOpen, setActivityOpen] = useState(false);
 
+  // ✅ Added Scroll To Top Function (NEW)
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const handleCloseMenu = () => {
     setMobileOpen(false);
     setAboutOpen(false);
     setStudentOpen(false);
     setActivityOpen(false);
+    scrollToTop(); // ✅ Only this line added
   };
 
   return (
@@ -198,9 +205,9 @@ const Navbar = () => {
         </NavLink>
       </nav>
 
-      <div className="announcement">
+      {/* <div className="announcement">
         A Brand New Hostel at Asian College Residency
-      </div>
+      </div> */}
     </>
   );
 };

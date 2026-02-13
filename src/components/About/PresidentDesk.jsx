@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./PresidentDesk.css";
 import presidentImg from "../../assets/about/president.png";
+import { useLocation } from "react-router-dom";
 
 const PresidentDesk = () => {
   const [visibleSections, setVisibleSections] = useState({});
@@ -35,6 +36,7 @@ const PresidentDesk = () => {
     }
   };
 
+const location = useLocation();
   return (
     <div className="president-page">
       {/* Hero Section */}
@@ -50,17 +52,35 @@ const PresidentDesk = () => {
 
       <div className="president-container">
         {/* Sidebar */}
-        <div className="president-sidebar">
-          <h3>About</h3>
-          <ul>
-            <li><Link to="/about">The College</Link></li>
-            <li className="active"><Link to="#">President’s Desk</Link></li>
-            <li><Link to="#">Vision</Link></li>
-            <li><Link to="#">Mission</Link></li>
-            <li><Link to="#">Our Staff</Link></li>
-            <li><Link to="#">Achievements</Link></li>
-          </ul>
-        </div>
+       <div className="president-sidebar">
+  <h3>About</h3>
+  <ul>
+    <li className={location.pathname === "/about/college" ? "active" : ""}>
+      <Link to="/about/college">The College</Link>
+    </li>
+
+    <li className={location.pathname === "/about/presidentDesk" ? "active" : ""}>
+      <Link to="/about/presidentDesk">President’s Desk</Link>
+    </li>
+
+    <li className={location.pathname === "/about/vision" ? "active" : ""}>
+      <Link to="/about/vision">Vision</Link>
+    </li>
+
+    <li className={location.pathname === "/about/mission" ? "active" : ""}>
+      <Link to="/about/mission">Mission</Link>
+    </li>
+
+    <li className={location.pathname === "/about/ourStaff" ? "active" : ""}>
+      <Link to="/about/ourStaff">Our Staff</Link>
+    </li>
+
+    <li className={location.pathname === "/about/achievements" ? "active" : ""}>
+      <Link to="/about/achievements">Achievements</Link>
+    </li>
+  </ul>
+</div>
+
 
         {/* Content */}
         <div

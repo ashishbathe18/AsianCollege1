@@ -1,0 +1,63 @@
+.details-page {
+  padding: 60px 100px;
+  background: #f5f7fa;
+}
+
+.details-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.back-btn {
+  background: #e53935;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.details-header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.details-header img {
+  width: 220px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.details-header h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.details-header .role {
+  color: #e53935;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.details-header .qualification,
+.details-header .experience {
+  color: #555;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .details-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .details-page {
+    padding: 40px 20px;
+  }
+}
