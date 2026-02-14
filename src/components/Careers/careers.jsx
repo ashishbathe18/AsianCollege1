@@ -1,6 +1,6 @@
 import React from "react";
 import "./careers.css";
-import Blog from "../Blogs/blog";
+
 
 function Career() {
   return (
@@ -18,7 +18,7 @@ function Career() {
         Home <span>›</span> Career
       </section>
       <br />
-      <Blog />
+    
       <br />
       {/* INTRO */}
       <section className="career-intro">

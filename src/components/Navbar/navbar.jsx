@@ -79,8 +79,6 @@
 
 
 
-
-
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
@@ -92,7 +90,6 @@ const Navbar = () => {
   const [studentOpen, setStudentOpen] = useState(false);
   const [activityOpen, setActivityOpen] = useState(false);
 
-  // ✅ Added Scroll To Top Function (NEW)
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -105,7 +102,7 @@ const Navbar = () => {
     setAboutOpen(false);
     setStudentOpen(false);
     setActivityOpen(false);
-    scrollToTop(); // ✅ Only this line added
+    scrollToTop();
   };
 
   return (
@@ -178,9 +175,9 @@ const Navbar = () => {
 
           <div className={`dropdown-menu ${activityOpen ? "show" : ""}`}>
             <NavLink to="/academics/gallery" onClick={handleCloseMenu}>Gallery</NavLink>
-            <NavLink to="/academics/cultural" onClick={handleCloseMenu}>Post/Blog</NavLink>
+            <NavLink to="/academics/blog" onClick={handleCloseMenu}>Post / Blog</NavLink>
             <NavLink to="/academics/nss" onClick={handleCloseMenu}>NSS</NavLink>
-            <NavLink to="/academics/club" onClick={handleCloseMenu}>Newspaper Publication</NavLink>
+            <NavLink to="/academics/newspeper" onClick={handleCloseMenu}>Newspaper Publication</NavLink>
           </div>
         </div>
 
@@ -204,10 +201,6 @@ const Navbar = () => {
           Contact Us
         </NavLink>
       </nav>
-
-      {/* <div className="announcement">
-        A Brand New Hostel at Asian College Residency
-      </div> */}
     </>
   );
 };

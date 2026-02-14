@@ -1,0 +1,93 @@
+.nss-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f6f9;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #263f48);
+  color: white;
+  padding: 80px 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Cards Section */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  background: white;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cards-section {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

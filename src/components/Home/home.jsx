@@ -144,12 +144,9 @@ const images = [hero1,hero2,hero3
     <div className="title-line"></div>
 
     <p className="about-text">
-    Here is a detailed and professional description you can use for your website or brochure:
+   Asian College is part of the Asian Group of Colleges, a well-established educational organization committed to delivering quality higher education. Founded in the academic session 2010–11, the institution was created with the vision of providing modern, career-oriented education that bridges academic learning with real-world industry demands.
 
-Asian College has been accredited with a NAAC B+ Grade, recognizing the institution’s commitment to maintaining quality standards in higher education. This accreditation reflects strong performance in key areas such as teaching-learning processes, infrastructure, governance, student support services, research initiatives, and overall institutional development.
-
-The B+ grade signifies that the college meets national benchmarks set by the National Assessment and Accreditation Council (NAAC) and continuously strives for academic excellence, innovation, and holistic student growth.
-   Through quality enhancement practices, modern facilities, experienced faculty, and transparent administration, Asian College remains dedicated to delivering value-based and career-oriented education. </p>
+The college emphasizes academic excellence, professional competency, and holistic personality development to prepare students for competitive global careers. </p>
   </div>
 
   {/* <div className="enquiry-vertical">Enquiry</div> */}

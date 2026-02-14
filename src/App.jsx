@@ -5,11 +5,10 @@ import Footer from "./components/Footer/footer";
 
 import Home from "./components/Home/home";
 import Students from "./components/Students/students";
-import Academics from "./components/Academics/academics";
-import Culture from "./components/Academics/culture";
 import Nss from "./components/Academics/Nss";
-import Clubs from "./components/Academics/clubs";
 import Gallery from "./components/Academics/Gallery";
+import Blog from "./components/Academics/blog";
+import NewsSection from "./components/Academics/newspeper";
 
 import Examination from "./components/Examination/examination";
 import IQAC from "./components/IQAC/placement";
@@ -25,7 +24,6 @@ import Visionpage from "./components/About/Vision";
 import Missionpage from "./components/About/Mission";
 import OurStaffpage from "./components/About/OurStaff";
 import AchievementPage from "./components/About/Achievements";
-import StaffDetails from "./components/About/StaffDetails";
 
 function App() {
   return (
@@ -49,10 +47,9 @@ function App() {
         <Route path="/students" element={<Students />} />
 
         {/* Academics Pages */}
-        <Route path="/academics" element={<Academics />} />
-        <Route path="/academics/cultural" element={<Culture />} />
+        <Route path="/academics/blog" element={<Blog />} />
         <Route path="/academics/nss" element={<Nss />} />
-        <Route path="/academics/clubs" element={<Clubs />} />
+        <Route path="/academics/newspeper" element={<NewsSection />} />
         <Route path="/academics/gallery" element={<Gallery />} />
 
         <Route path="/examination" element={<Examination />} />

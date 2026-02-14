@@ -1,0 +1,121 @@
+/* ================= PAGE ================= */
+.blog-page {
+  font-family: "Poppins", sans-serif;
+  background: #f4f6f9;
+}
+
+/* ================= HERO ================= */
+.blog-hero {
+  background: linear-gradient(135deg,#263f48);
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.blog-hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.blog-hero p {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+/* ================= BLOG GRID ================= */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 80px 10%;
+}
+
+/* ================= BLOG CARD ================= */
+.blog-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.blog-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 25px;
+}
+
+.blog-date {
+  font-size: 13px;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.blog-content h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.blog-content p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.read-btn {
+  margin-top: 15px;
+  padding: 10px 22px;
+  border: none;
+  background: #263f48;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-btn:hover {
+  background: #263f48;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+    padding: 50px 5%;
+  }
+
+  .blog-hero {
+    padding: 70px 20px;
+  }
+
+  .blog-hero h1 {
+    font-size: 28px;
+  }
+
+  .blog-hero p {
+    font-size: 15px;
+  }
+
+  .blog-image img {
+    height: 200px;
+  }
+}
+
