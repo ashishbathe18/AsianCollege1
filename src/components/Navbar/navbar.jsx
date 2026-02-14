@@ -60,9 +60,9 @@ const Navbar = () => {
   <span className="menu-btn">Activities ▾</span>
   <div className="dropdown-menu">
     <NavLink to="/academics/gallery">Gallery</NavLink>
-    <NavLink to="/academics/cultural">Post/blog</NavLink>
+    <NavLink to="/academics/blog">Post/blog</NavLink>
     <NavLink to="/academics/nss">NSS</NavLink>
-    <NavLink to="/academics/club">News pepar publication</NavLink>
+    <NavLink to="/academics/newspeper">News pepar publication</NavLink>
   </div>
 </div>
         <NavLink to="/examination" className="menu-btn">Examination</NavLink>
