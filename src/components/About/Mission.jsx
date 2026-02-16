@@ -51,11 +51,11 @@ const Mission = () => {
           <h3>About</h3>
           <ul>
             <li><Link to="/about/college">The College</Link></li>
-            <li><Link to="/about/presidentDesk">President’s Desk</Link></li>
-            <li><Link to="/about/vision">Vision</Link></li>
-            <li className="active"><Link to="/about/mission">Mission</Link></li>
-            <li><Link to="#">Our Staff</Link></li>
-            <li><Link to="#">Achievements</Link></li>
+              <li><Link to="/about/presidentDesk">President’s Desk</Link></li>
+                              <li><Link to="/about/vision">Vision</Link></li>
+                              <li><Link to="/about/mission">Mission</Link></li>
+                              <li><Link to="/about/ourStaff">Our Staff</Link></li>
+                              <li><Link to="/about/achievements">Achievements</Link></li>
           </ul>
         </nav>
 

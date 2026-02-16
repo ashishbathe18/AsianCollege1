@@ -101,17 +101,17 @@
 
 
 
-
-
 import React, { useState, useEffect } from "react";
 import "./Contact.css";
+import contactBg from "../../assets/gallery/cu3.png";
+
 
 function Contact() {
   const [captcha, setCaptcha] = useState("");
   const [userCaptcha, setUserCaptcha] = useState("");
   const [error, setError] = useState("");
 
-  // Random captcha generator
+  // Generate random captcha
   const generateCaptcha = () => {
     const chars =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -131,34 +131,36 @@ function Contact() {
 
     if (userCaptcha !== captcha) {
       setError("Invalid Captcha. Please try again.");
-      generateCaptcha(); // new captcha if wrong
+      generateCaptcha();
       setUserCaptcha("");
       return;
     }
 
     setError("");
     alert("Form Submitted Successfully ✅");
+
+    // Reset form fields
+    e.target.reset();
+    setUserCaptcha("");
+    generateCaptcha();
   };
 
   return (
     <div>
-      <div
-        className="contact-hero"
-        style={{
-          backgroundImage: `url(https://www.asianacademypune.ac.in/writable/uploads/head-banner.jpg)`,
-        }}
-      >
-        <div className="overlay">
-          <h1>Contact Us</h1>
-        </div>
-{/* 
-        <div className="breadcrumb">
-          <span className="home">Home</span>
-          <span className="arrow">›</span>
-          <span>Contact Us</span>
-        </div> */}
-      </div>
+      {/* HERO SECTION */}
+     <div
+  className="contact-hero"
+  style={{
+    backgroundImage: `url(${contactBg})`,
+   
+  }}
+>
+  <div className="overlay">
+    <h1>Contact Us</h1>
+  </div>
+</div>
 
+      {/* CONTACT SECTION */}
       <div className="contact-wrapper">
         {/* LEFT SIDE */}
         <div className="contact-info">
@@ -174,7 +176,7 @@ function Contact() {
           <p>✉️ asianacademypune@gmail.com</p>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT SIDE FORM */}
         <div className="contact-form">
           <form onSubmit={handleSubmit}>
             <label>
@@ -205,6 +207,7 @@ function Contact() {
             <label>
               Captcha <span>*</span>
             </label>
+
             <div className="captcha-row">
               <input
                 type="text"
@@ -213,7 +216,9 @@ function Contact() {
                 onChange={(e) => setUserCaptcha(e.target.value)}
                 required
               />
+
               <div className="captcha-box">{captcha}</div>
+
               <button
                 type="button"
                 onClick={generateCaptcha}
@@ -225,11 +230,14 @@ function Contact() {
 
             {error && <p className="error">{error}</p>}
 
-            <button type="submit" className="send">Send Message</button>
+            <button type="submit" className="send">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
 
+      {/* MAP */}
       <div className="map-container">
         <iframe
           title="Asian College Location"

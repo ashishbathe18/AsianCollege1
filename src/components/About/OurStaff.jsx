@@ -130,6 +130,14 @@ import other2 from "../../assets/img/OurStaff/other2.png";
 import other3 from "../../assets/img/OurStaff/other3.png";
 import other4 from "../../assets/img/OurStaff/other4.png";
 import other5 from "../../assets/img/OurStaff/other5.png";
+import p11 from "../../assets/img/OurStaff/p1.png";
+import p33 from "../../assets/img/OurStaff/p3.png";
+import p44 from "../../assets/img/OurStaff/p4.png";
+import p55 from "../../assets/img/OurStaff/p5.png";
+import p66 from "../../assets/img/OurStaff/p6.png";
+import p77 from "../../assets/img/OurStaff/p7.jpeg";
+import p88 from "../../assets/img/OurStaff/p8.jpeg";
+import p99 from "../../assets/img/OurStaff/p9.jpeg";
 
 
 export default function OurStaff() {
@@ -157,12 +165,12 @@ const location = useLocation();
     qualification: "BE (Civil)",
     img: Img2,
   },
-  {
-    name: "Shruti Rege",
-    role: "Vice-Principal",
-    qualification: "MCA (Engineering)",
-    img:Img3
-  },
+  // {
+  //   name: "Shruti Rege",
+  //   role: "Vice-Principal",
+  //   qualification: "MCA (Engineering)",
+  //   img:Img3
+  // },
   {
     name: "Dr. Savita Singh",
     role: "Principal",
@@ -200,7 +208,7 @@ const location = useLocation();
   name: "Mrs. Gauri Vijay Ghatge Renuse",
   role: "Assistant Professor",
   qualification: "M.A History, M.A Political Science, B.Ed",
-  img: art5,
+  img: p44,
 },
 {
   name: "Shraddha Devidas Hingane",
@@ -221,10 +229,32 @@ const location = useLocation();
     "Focused on Holistic Development and Academic Excellence of students with specialization in Marathi and Banking Financial Services Insurance Communication.",
   img: art8,
 },
+{
+  name: "Mrs. Snehal Uchale",
+  role: "Assistant Professor",
+  qualification:
+    "BSL. L L.B LLM",
+  img: p66,
+},
+{
+  name: "Sushmita Prakash Nikalje ",
+  role: "Assistant Professor",
+  qualification:
+    "M.A in English",
+  img: p77,
+},
+{
+  name: "Suryavanshi Jyoti Arun ",
+  role: "",
+  qualification:
+    "MCA, BSC CS, Diploma in IT",
+  img: p99,
+},
 
     ],
 
     Commerce: [
+
   {
     name: "Mrs. Swati C. Kale",
     role: "HOD, BBA, BBA-IB, BCA",
@@ -260,6 +290,44 @@ const location = useLocation();
     experience: "4 Years Experience",
     img: commerce5,
   },
+  
+  {
+    name: "Tushar Anil Bargaje ",
+    role: "Assistant Professor",
+    qualification: "",
+    experience: "",
+    img: p55,
+  },
+  {
+  name: "Mrs. Snehal Uchale",
+  role: "Assistant Professor",
+  qualification:
+    "BSL. L L.B LLM",
+  img: p66,
+},
+{
+  name: "Sushmita Prakash Nikalje ",
+  role: "Assistant Professor",
+  qualification:
+    "M.A in English",
+  img: p77,
+},
+{
+  name: "Dhanshree Raghavdas More",
+  role: "Assistant Professor",
+  qualification:
+    "",
+  img: p88,
+},
+{
+  name: "Suryavanshi Jyoti Arun ",
+  role: "",
+  qualification:
+    "MCA, BSC CS, Diploma in IT",
+  img: p99,
+},
+
+  
 ],
 
    Science: [
@@ -312,6 +380,27 @@ const location = useLocation();
     experience: "",
     img: sci7,
   },
+  {
+    name: " Soumya Kamlesh Malgaonkar",
+    role: "Assistant Professor",
+    qualification: "MSc Biotechnology",
+    experience: "",
+    img: p33,
+  },
+  {
+  name: "Sushmita Prakash Nikalje ",
+  role: "Assistant Professor",
+  qualification:
+    "M.A in English",
+  img: p77,
+},
+{
+  name: "Suryavanshi Jyoti Arun ",
+  role: "",
+  qualification:
+    "MCA, BSC CS, Diploma in IT",
+  img: p99,
+},
 ],
 
    Other: [
@@ -344,6 +433,13 @@ const location = useLocation();
     role: "Office Clerk",
     qualification: "B.Sc Statistics",
     img: other5,
+  },
+  {
+    name: "pawar priyanka chandrakant.",
+    role: "Office Supritendent ",
+    qualification: "B.Com",
+    experience: "4 Years Experience",
+    img: p11,
   },
 ],
 
@@ -410,9 +506,9 @@ const location = useLocation();
                     <h3>{staff.name}</h3>
                     <p className="role">{staff.role}</p>
                     <p className="qualification">{staff.qualification}</p>
-                    <button className="details-btn">
+                    {/* <button className="details-btn">
                       View Details
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               ))
