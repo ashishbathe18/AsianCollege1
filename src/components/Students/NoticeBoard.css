@@ -1,212 +1,197 @@
+/* ===============================
+   NOTICE PAGE
+================================= */
+
 .notice-page {
-  padding: 40px 20px;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #eef2f7, #f8fafc);
+  min-height: 100vh;
 }
 
-/* ================= TICKER ================= */
-.notice-ticker {
-  background: linear-gradient(90deg, #263f48, #006b5f);
-  color: white;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 12px 0;
-}
-
-.ticker-track {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll 18s linear infinite;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-
-/* ================= TITLE ================= */
 .main-title {
   text-align: center;
-  margin: 50px 0;
-  font-size: 34px;
-  color: #263f48;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #002147;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-/* ================= CLASSIC SECTION ================= */
-.classic-section {
-  display: flex;
-  max-width: 1100px;
+.main-title::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: crimson;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* ===============================
+   GRID
+================================= */
+
+.notice-grid {
+  max-width: 1200px;
   margin: auto;
-  background: #f9f9f9;
-  border-radius: 12px;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-.classic-left {
-  background: #263f48;
-  color: white;
-  padding: 30px;
-  width: 30%;
-}
-
-.classic-right {
-  width: 70%;
-  max-height: 250px;
-  overflow-y: auto;
-  padding: 20px;
-}
-
-.notice-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  align-items: center;
-  animation: fadeUp 0.6s ease;
-}
-
-.date {
-  font-weight: bold;
-  width: 120px;
-}
-
-.new-badge {
-  background: red;
-  color: white;
-  font-size: 11px;
-  padding: 3px 8px;
-  margin-left: 10px;
-  border-radius: 12px;
-}
-
-.download-btn {
-  background: #263f48;
-  color: white;
-  padding: 6px 15px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.download-btn:hover {
-  background: #263f48;
-}
-
-/* ================= CARDS ================= */
-.card-section {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 60px 0;
-}
+/* ===============================
+   CARD
+================================= */
 
 .notice-card {
-  width: 300px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  transition: 0.3s;
-  background: white;
-}
-
-.notice-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .notice-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 }
 
-.card-content {
-  padding: 20px;
+/* ===============================
+   TITLE
+================================= */
+
+.notice-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #002147;
+  margin-bottom: 8px;
 }
 
-.card-date {
-  font-size: 13px;
-  color: gray;
+/* ===============================
+   DATE
+================================= */
+
+.notice-date {
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
-/* ================= ACCORDION ================= */
-.accordion-section {
-  max-width: 800px;
-  margin: auto;
-}
+/* ===============================
+   META INFO (Year/Class/Sem)
+================================= */
 
-.accordion-header {
-  background: #263f48;
-  color: white;
-  padding: 12px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.accordion-body {
-  background: #f4f4f4;
-  padding: 15px;
-  animation: fadeIn 0.3s ease-in;
-}
-
-/* ================= TIMELINE ================= */
-.timeline-section {
-  max-width: 700px;
-  margin: 60px auto;
-  text-align: center;   /* 👈 section text center */
-}
-
-.timeline-item {
+.notice-meta {
   display: flex;
-  flex-direction: column;  /* 👈 vertical layout */
-  align-items: center;     /* 👈 center everything */
-  margin-bottom: 40px;
-  animation: fadeUp 0.6s ease;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.timeline-dot {
-  width: 18px;
-  height: 18px;
-  background: #263f48;
-  border-radius: 50%;
-  margin-bottom: 10px;  /* 👈 dot खाली space */
+.notice-meta span {
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #333;
 }
 
-/* Optional: heading & date styling */
-.timeline-item h4 {
-  margin: 5px 0;
+/* ===============================
+   DESCRIPTION
+================================= */
+
+.notice-description {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
 }
 
-.timeline-item span {
-  font-size: 14px;
-  color: gray;
+/* ===============================
+   BUTTON
+================================= */
+
+.read-btn {
+  align-self: flex-start;
+  background: linear-gradient(45deg, #002147, #2563eb);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-
-@keyframes fadeUp {
-  from {opacity:0; transform: translateY(20px);}
-  to {opacity:1; transform: translateY(0);}
+.read-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
 }
 
-/* ================= RESPONSIVE ================= */
-@media(max-width:768px){
-  .classic-section {
-    flex-direction: column;
+/* ===============================
+   LOADING / EMPTY
+================================= */
+
+.notice-state {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .notice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .notice-page {
+    padding: 50px 15px;
   }
 
-  .classic-left,
-  .classic-right {
-    width: 100%;
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 35px;
   }
 
-  .notice-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
+  .notice-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .card-section {
-    flex-direction: column;
-    align-items: center;
+  .notice-card {
+    padding: 20px;
+  }
+
+  .notice-title {
+    font-size: 1rem;
+  }
+
+  .notice-description {
+    font-size: 0.85rem;
+  }
+
+  .notice-meta span {
+    font-size: 0.7rem;
+  }
+
+  .read-btn {
+    font-size: 0.75rem;
+    padding: 7px 14px;
   }
 }

@@ -1,41 +1,31 @@
-import React from "react";
-import "./Courses.css";
-import heroImg from "../../assets/students/courses.png";
-import com from "../../assets/students/com.png";
-import art from "../../assets/students/art.png";
-import sci from "../../assets/students/sci.png"
 import { Link } from "react-router-dom";
+import "./Courses.css";
+import heroImg from "../../src/assets/students/courses.png";
+import com from "../../src/assets/students/com.png";
+import art from "../../src/assets/students/art.png";
+import sci from "../../src/assets/students/sci.png";
+
 function Courses() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
-      {/* ================= HERO SECTION ================= */}
-      <section
-        className="courses-hero"
-        style={{ backgroundImage: `url(${heroImg})` }}
-      >
-        <div className="overlay">
-          <div className="hero-content">
-            <h1>Courses</h1>
-            <div className="breadcrumb">
-              <span>Home</span>
-              <span>›</span>
-              <span>Student Corner</span>
-              <span>›</span>
-              <span className="active">Courses</span>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* ================= COURSES SECTION ================= */}
       <section className="courses-section">
         <div className="container">
-          <h2 className="section-title">Courses</h2>
-          <h3 className="degree-title">Bachelor</h3>
+          <div className="section-header">
+            <h2 className="fw-bold">our courses</h2>
+           
+          </div>
 
           <div className="courses-grid">
-           
-
             {/* Card 1 */}
             <div className="course-card">
               <div className="course-img">
@@ -47,13 +37,13 @@ function Courses() {
                   Three years degree program under NEP 2020 with strong
                   foundation in commerce and finance.
                 </p>
-               <Link to="/students/courses/bcom">
-                 <button>View Details</button>
-             </Link>
+                <Link to="/courses/com" onClick={scrollToTop}>
+                  <button>View Details</button>
+                </Link>
               </div>
             </div>
 
- {/* Card 2 */}
+            {/* Card 2 */}
             <div className="course-card">
               <div className="course-img">
                 <img src={art} alt="BA" />
@@ -64,11 +54,12 @@ function Courses() {
                   Undergraduate program focusing on economics systems,
                   political theory and public administration.
                 </p>
-              <Link to="/students/courses/art">
-                 <button>View Details</button>
-             </Link>
+                <Link to="/courses/art" onClick={scrollToTop}>
+                  <button>View Details</button>
+                </Link>
               </div>
             </div>
+
             {/* Card 3 */}
             <div className="course-card">
               <div className="course-img">
@@ -80,9 +71,9 @@ function Courses() {
                   Science based undergraduate program focusing on practical
                   and research-oriented subjects.
                 </p>
-                  <Link to="/students/courses/sci">
-                 <button>View Details</button>
-             </Link>
+                <Link to="/courses/sci" onClick={scrollToTop}>
+                  <button>View Details</button>
+                </Link>
               </div>
             </div>
           </div>

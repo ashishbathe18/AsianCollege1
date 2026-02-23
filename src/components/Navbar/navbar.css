@@ -1,50 +1,55 @@
 /* ===============================
-   TOP HEADER (Modern Clean Look)
-=================================*/
+   TOP HEADER
+================================= */
 .top-header {
-  /* background: linear-gradient(90deg, #1e3c72, #2a5298); */
-  padding: 12px 40px;
-  color: #fff;
+  background: #ffffff;
+  padding: 10px 20px;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.left-section {
+.top-header-inner {
   display: flex;
   align-items: center;
-  gap: 15px;
+  justify-content: center;
+  position: relative;
 }
 
+/* LOGO */
 .logo {
-  width: 65px;
-}
-
-.college-text h6 {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.college-text p {
-  margin: 0;
-  font-size: 11px;
-  opacity: 0.9;
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===============================
    HAMBURGER
-=================================*/
+================================= */
 .hamburger {
   display: none;
-  font-size: 28px;
+  font-size: 20px;
   cursor: pointer;
-  color: #fff;
+  color: #1b0202;
 }
 
+/* ===============================
+   MOBILE VIEW
+================================= */
+@media (max-width: 768px) {
+
+  .top-header-inner {
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    left: 10px;   /* Logo cha left side */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .logo {
+    width: 100%;
+  }
+}
 /* ===============================
    MENU BAR (Glass Effect)
 =================================*/
@@ -262,7 +267,7 @@
 }
 .top-header {
   /* background: #f0e9e9; */
-  background: rgb(254, 226, 174);
+  background:#ffffff;
   padding: 20px 0;
   text-align: center;
 }
@@ -320,7 +325,7 @@
 /* Responsive adjustments */
 @media (max-width: 992px) {
   .logo {
-    width: 500px;
+    width: 800px;
   }
 }
 
@@ -335,3 +340,16 @@
     width: 250px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

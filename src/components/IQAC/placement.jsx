@@ -1,43 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./placement.css";
 
 function Placement() {
+  const [placements, setPlacements] = useState([]);
   const [selectedImg, setSelectedImg] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const placements = [
-    {
-      name: "Rahul Patil",
-      position: "Frontend Developer",
-      company: "TCS",
-      college: "Dr. D. Y. Patil College",
-      packageAmount: "4.5 LPA",
-      image: "https://via.placeholder.com/300",
-    },
-    {
-      name: "Sneha More",
-      position: "MERN Stack Developer",
-      company: "Infosys",
-      college: "SP College Pune",
-      packageAmount: "6 LPA",
-      image: "https://via.placeholder.com/300",
-    },
-    {
-      name: "Amit Deshmukh",
-      position: "Backend Developer",
-      company: "Wipro",
-      college: "Modern College",
-      packageAmount: "5 LPA",
-      image: "https://via.placeholder.com/300",
-    },
-    {
-      name: "Priya Kulkarni",
-      position: "Software Engineer",
-      company: "Capgemini",
-      college: "Fergusson College",
-      packageAmount: "7 LPA",
-      image: "https://via.placeholder.com/300",
-    },
-  ];
+  useEffect(() => {
+    fetch("http://localhost:5000/api/placements")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Placement API Response:", data);
+
+        // Ensure array
+        if (Array.isArray(data)) {
+          setPlacements(data);
+        } else if (Array.isArray(data.data)) {
+          setPlacements(data.data);
+        } else {
+          setPlacements([]);
+        }
+
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching placements:", err);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <section className="placement-section">
@@ -50,29 +40,41 @@ function Placement() {
         </div>
 
         <div className="placement-grid">
-          {placements.map((item, index) => (
-            <div
-              key={index}
-              className="placement-card"
-              onClick={() => setSelectedImg(item.image)}
-            >
-              <span className="placement-OrangeITech-head">Asian College</span>
+          {loading ? (
+            <p>Loading placements...</p>
+          ) : placements.length === 0 ? (
+            <p>No placement data available</p>
+          ) : (
+            placements.map((item) => (
+              <div
+                key={item._id}
+                className="placement-card"
+                onClick={() => setSelectedImg(item.image)}
+              >
+                <span className="placement-OrangeITech-head">
+                  {item.college}
+                </span>
 
-              <div className="placement-img">
-                <img src={item.image} alt={item.name} />
-              </div>
+                <div className="placement-img">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                  />
+                </div>
 
-              <h5>{item.name}</h5>
-              <p><strong>Position :</strong> {item.position}</p>
-              <h6><strong>Company :</strong> {item.company}</h6>
-           
-              <div className="student-package">
-                <strong>Package :</strong> {item.packageAmount}
+                <h5>{item.name}</h5>
+                <p><strong>Position :</strong> {item.position}</p>
+                <h6><strong>Company :</strong> {item.company}</h6>
+
+                <div className="student-package">
+                  <strong>Package :</strong> {item.packageAmount}
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
-          
+
+        {/* Lightbox */}
         {selectedImg && (
           <div className="lightbox" onClick={() => setSelectedImg(null)}>
             <span className="close-btn">&times;</span>

@@ -165,12 +165,7 @@ const location = useLocation();
     qualification: "BE (Civil)",
     img: Img2,
   },
-  // {
-  //   name: "Shruti Rege",
-  //   role: "Vice-Principal",
-  //   qualification: "MCA (Engineering)",
-  //   img:Img3
-  // },
+  
   {
     name: "Dr. Savita Singh",
     role: "Principal",
@@ -180,54 +175,12 @@ const location = useLocation();
     ],
 
     Arts: [
-      {
-        name: "Mr. Mayur Dilip More",
-        role: "Assistant Professor",
-        qualification: "MA (Economics)",
-        img: art1,
-      },
-      {
-        name: "Mr. Ankush Jadhav",
-        role: "HOD B.A",
-        qualification: "MA Political Science",
-        img: art2
-      },
-      {
-        name: "Mr. Balasaheb Shingare",
-        role: "Assistant Professor",
-        qualification: "MA (Marathi)",
-        img: art3,
-      },
-      {
-        name: "Suashma Nikale",
-        role: "Assistant Professor",
-        qualification: "MA (English), B.Ed",
-        img: art4,
-      },
+     
       {
   name: "Mrs. Gauri Vijay Ghatge Renuse",
   role: "Assistant Professor",
   qualification: "M.A History, M.A Political Science, B.Ed",
   img: p44,
-},
-{
-  name: "Shraddha Devidas Hingane",
-  role: "Assistant Professor",
-  qualification: "M.A Geography",
-  img: art6,
-},
-{
-  name: "Kengar Revansiddha Shankar",
-  role: "Assistant Professor",
-  qualification: "M.A, B.Ed",
-  img: art7,
-},
-{
-  name: "Gautam Kedarnath Jagtap",
-  role: "Assistant Professor",
-  qualification:
-    "Focused on Holistic Development and Academic Excellence of students with specialization in Marathi and Banking Financial Services Insurance Communication.",
-  img: art8,
 },
 {
   name: "Mrs. Snehal Uchale",
@@ -236,6 +189,15 @@ const location = useLocation();
     "BSL. L L.B LLM",
   img: p66,
 },
+
+{
+  name: "Gautam Kedarnath Jagtap",
+  role: "Assistant Professor",
+  qualification:
+    "Focused on Holistic Development and Academic Excellence of students with specialization in Marathi and Banking Financial Services Insurance Communication.",
+  img: art8,
+},
+
 {
   name: "Sushmita Prakash Nikalje ",
   role: "Assistant Professor",
@@ -251,46 +213,18 @@ const location = useLocation();
   img: p99,
 },
 
+
     ],
 
     Commerce: [
 
-  {
-    name: "Mrs. Swati C. Kale",
-    role: "HOD, BBA, BBA-IB, BCA",
-    qualification: "M.Com, MBA (Finance & HR)",
-    experience: "6 Years Experience",
-    img: commerce1,
-  },
-  {
-    name: "Mrs. Latika Shankar Sharma",
-    role: "HOD, BBA(CA), B.Sc(CS)",
-    qualification: "MCA, M.Sc",
-    experience: "5 Years Experience",
-    img: commerce2,
-  },
-  {
-    name: "Mrs. Shradha Sampy Mandhare",
-    role: "Assistant Professor",
-    qualification: "MBA Finance",
-    experience: "1 Year 5 Months Experience",
-    img:commerce3,
-  },
-  {
-    name: "Mrs. Ashwini Wagh",
-    role: "Assistant Professor",
-    qualification: "LLM",
-    experience: "3 Years Experience",
-    img: commerce4,
-  },
-  {
-    name: "Mrs. Aarti Harachandra Khade",
-    role: "Assistant Professor",
-    qualification: "M.Com, SET, NET",
-    experience: "4 Years Experience",
-    img: commerce5,
-  },
   
+     {
+  name: "Mrs. Gauri Vijay Ghatge Renuse",
+  role: "Assistant Professor",
+  qualification: "M.A History, M.A Political Science, B.Ed",
+  img: p44,
+},
   {
     name: "Tushar Anil Bargaje ",
     role: "Assistant Professor",
@@ -332,61 +266,19 @@ const location = useLocation();
 
    Science: [
   {
-    name: "Vaishnavi Mahendra Joshi",
-    role: "Assistant Professor",
-    qualification: "M.Sc",
-    experience: "2 Years Experience",
-    img: sci1,
-  },
-  {
-    name: "Mrs. Rupali Bhushan Dakhale",
-    role: "HOD",
-    qualification: "M.Sc (Biotechnology), SET, GATE",
-    experience: "",
-    img: sci2,
-  },
-  {
-    name: "Mrs. Akanksha Umbare",
-    role: "HOD B.Sc",
-    qualification: "M.Sc Microbiology, B.Ed",
-    experience: "",
-    img: sci3,
-  },
-  {
-    name: "Mrs. Nalini Parakhit Nark",
-    role: "Assistant Professor",
-    qualification: "M.Sc Biotechnology (Pune University)",
-    experience: "",
-    img:sci4,
-  },
-  {
-    name: "J. Eshwar Kumar",
-    role: "Assistant Professor",
-    qualification: "M.Sc (Physical Chemistry), GATE, Ph.D (Pursuing)",
-    experience: "",
-    img: sci5,
-  },
-  {
-    name: "Mrs. Uttamkare Mamata",
-    role: "Assistant Professor",
-    qualification: "M.Sc Chemistry",
-    experience: "",
-    img: sci6,
-  },
-  {
-    name: "Nandini Siddharthkankar Kale",
-    role: "Assistant Professor",
-    qualification: "M.Sc Inorganic Chemistry",
-    experience: "",
-    img: sci7,
-  },
-  {
     name: " Soumya Kamlesh Malgaonkar",
     role: "Assistant Professor",
     qualification: "MSc Biotechnology",
     experience: "",
     img: p33,
   },
+  {
+  name: "Gautam Kedarnath Jagtap",
+  role: "Assistant Professor",
+  qualification:
+    "Focused on Holistic Development and Academic Excellence of students with specialization in Marathi and Banking Financial Services Insurance Communication.",
+  img: art8,
+},
   {
   name: "Sushmita Prakash Nikalje ",
   role: "Assistant Professor",
@@ -404,36 +296,7 @@ const location = useLocation();
 ],
 
    Other: [
-  {
-    name: "Mrs. Shailendra Karve",
-    role: "TBC Placement Cell",
-    qualification: "M.Com, 4 Years Experience",
-    img:other1,
-  },
-  {
-    name: "Ms. Nikita Kishor Dubey",
-    role: "Office Clerk",
-    qualification: "M.A, D.Ed",
-    img: other2,
-  },
-  {
-    name: "Mr. Umesh Bhalerao",
-    role: "Office Superintendent",
-    qualification: "B.Com",
-    img:other3,
-  },
-  {
-    name: "Sahil Bharat Maral",
-    role: "Office Clerk",
-    qualification: "B.Com",
-    img: other4,
-  },
-  {
-    name: "Urugade Swati Madhukar",
-    role: "Office Clerk",
-    qualification: "B.Sc Statistics",
-    img: other5,
-  },
+ 
   {
     name: "pawar priyanka chandrakant.",
     role: "Office Supritendent ",
@@ -449,7 +312,7 @@ const location = useLocation();
     <div className="staff-page">
 
       {/* Hero Section */}
-      <div className="hero">
+      <div className="hero-over">
         <div className="hero-overlay">
           <h1>Our Staff</h1>
           <p>Meet Our Experienced Faculty Members</p>

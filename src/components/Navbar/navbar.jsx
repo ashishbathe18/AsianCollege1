@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./navbar.css";
-import image from "../../assets/image.png";
+import image from "../../assets/logo/image.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,42 +26,42 @@ const Navbar = () => {
 
   return (
     <>
-      {/* ===== TOP HEADER ===== */}
-      <div className="top-header">
-        <div className="header-container">
-          <div className="left-section">
-            <img src={image} alt="Logo" className="logo" />
-{/* 
-            <div className="college-text">
-              <h6>ASIAN COLLEGE OF COMMERCE AND ARTS</h6>
-              <h6>MANAGEMENT & RESEARCH, AKURDI</h6>
-              <p>
-                Accredited by NAAC | ISO 21001:2018 <br />
-                Approved by AICTE | Affiliated to SPPU
-              </p>
-            </div> */}
-          </div>
 
-          <div className="hamburger" onClick={() => setMobileOpen(!mobileOpen)}>
-            ☰
-          </div>
-        </div>
-      </div>
+
+{/* /* ===== HEADER SECTION ===== */}
+<div className="top-header">
+  <div className="top-header-inner">
+
+    {/* MOBILE TOGGLE - LEFT */}
+    <div
+      className="hamburger"
+      onClick={() => setMobileOpen(!mobileOpen)}
+    >
+      ☰
+    </div>
+
+    {/* LOGO CENTER */}
+    <div className="logo-wrapper ">
+      <img src={image} alt="College Logo" className="logo" />
+    </div>
+
+  </div>
+</div>
 
       {/* ===== MENU BAR ===== */}
-      <nav className={`menu-bar ${mobileOpen ? "active" : ""}`}>
-        <NavLink to="/" className="menu-btn" onClick={handleCloseMenu}>
+      <nav className={`menu-bar  ${mobileOpen ? "active" : ""}`}>
+        <NavLink to="/" className="menu-btn fw-bold" onClick={handleCloseMenu}>
           Home
         </NavLink>
 
         {/* ABOUT DROPDOWN */}
-        <div className="dropdown">
-          <div className="menu-btn" onClick={() => setAboutOpen(!aboutOpen)}>
+        <div className="dropdown ">
+          <div className="menu-btn fw-bold" onClick={() => setAboutOpen(!aboutOpen)}>
             About ▾
           </div>
 
           <div className={`dropdown-menu ${aboutOpen ? "show" : ""}`}>
-            <NavLink to="/about/college" onClick={handleCloseMenu}>
+            <NavLink to="/about/college " onClick={handleCloseMenu}>
               The College
             </NavLink>
             <NavLink to="/about/presidentDesk" onClick={handleCloseMenu}>
@@ -82,32 +82,35 @@ const Navbar = () => {
           </div>
         </div>
 
+ <NavLink 
+  to="/Courses" 
+  className="menu-btn fw-bold"
+  onClick={handleCloseMenu}
+>
+  Courses
+</NavLink>
+
         {/* STUDENTS DROPDOWN */}
         <div className="dropdown">
           <div
-            className="menu-btn"
+            className="menu-btn fw-bold"
             onClick={() => setStudentOpen(!studentOpen)}
           >
             Students ▾
           </div>
 
           <div className={`dropdown-menu ${studentOpen ? "show" : ""}`}>
-            <NavLink to="/students/Courses" onClick={handleCloseMenu}>
-              Courses
-            </NavLink>
             <NavLink to="/students/NoticeBoard" onClick={handleCloseMenu}>
               NoticeBoard
             </NavLink>
-            <NavLink to="/students/Admission" onClick={handleCloseMenu}>
-              Admission
-            </NavLink>
+          
           </div>
         </div>
 
         {/* ACTIVITIES DROPDOWN */}
         <div className="dropdown">
           <div
-            className="menu-btn"
+            className="menu-btn fw-bold"
             onClick={() => setActivityOpen(!activityOpen)}
           >
             Activities ▾
@@ -129,27 +132,18 @@ const Navbar = () => {
           </div>
         </div>
 
-        <NavLink
-          to="/examination"
-          className="menu-btn"
-          onClick={handleCloseMenu}
-        >
-          Examination
-        </NavLink>
+       
 
-        <NavLink to="/iqac" className="menu-btn" onClick={handleCloseMenu}>
+        <NavLink to="/iqac" className="menu-btn fw-bold" onClick={handleCloseMenu}>
           Placement
         </NavLink>
 
-        <NavLink to="/careers" className="menu-btn" onClick={handleCloseMenu}>
-          Careers
-        </NavLink>
 
-        <NavLink to="/life" className="menu-btn" onClick={handleCloseMenu}>
+        <NavLink to="/life" className="menu-btn fw-bold" onClick={handleCloseMenu}>
           Life on Campus
         </NavLink>
 
-        <NavLink to="/contact" className="menu-btn" onClick={handleCloseMenu}>
+        <NavLink to="/contact" className="menu-btn fw-bold" onClick={handleCloseMenu}>
           Contact Us
         </NavLink>
       </nav>

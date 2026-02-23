@@ -13,8 +13,8 @@ body {
 
 /* ================= HERO SECTION ================= */
 /* ================= HERO SECTION ================= */
-.hero {
-  height: 70vh;
+.hero-over {
+  height: 55vh;
   background: url('../../assets/about/about.png') center/cover no-repeat;
   position: relative;
   display: flex;
@@ -31,7 +31,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* darkness level */
+  
 }
 
 /* Text container */

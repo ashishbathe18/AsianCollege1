@@ -1,0 +1,203 @@
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= HERO ================= */
+.ba-hero {
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+ 
+  display: flex;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+.breadcrumb {
+  margin-top: 15px;
+  display: inline-flex;
+  gap: 10px;
+  background: #d32f2f;
+  padding: 7px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* ================= SECTION ================= */
+.ba-section {
+  padding: 90px 0;
+  background: #f4f7fa;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* ================= INFO GRID ================= */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+.info-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ================= SUBJECTS ================= */
+.subjects-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.subject-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.subject-box ul {
+  margin-top: 15px;
+  line-height: 2;
+  color: #555;
+}
+
+/* ================= SKILLS ================= */
+.mt {
+  margin-top: 60px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills-grid span {
+  background: #2f3e46;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.skills-grid span:hover {
+  background: #d32f2f;
+}
+
+/* ================= CAREER ================= */
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.career-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.career-card:hover {
+  transform: translateY(-8px);
+  background: #2f3e46;
+  color: #fff;
+}
+
+/* ================= SALARY ================= */
+.salary-box {
+  margin-top: 60px;
+  background: linear-gradient(135deg, #2f3e46, #1b262c);
+  padding: 40px;
+  border-radius: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .info-grid,
+  .career-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subjects-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-grid,
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-hero {
+    height: 280px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .ba-section {
+    padding: 60px 0;
+  }
+
+  .salary-box {
+    padding: 25px;
+  }
+}

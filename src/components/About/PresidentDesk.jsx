@@ -43,10 +43,6 @@ const location = useLocation();
       <div className="president-hero">
         <div className="hero-overlay">
           <h1>President Desk</h1>
-          <p>
-            <Link to="/">Home</Link> /{" "}
-            <Link to="/about">About</Link> / President Desk
-          </p>
         </div>
       </div>
 
@@ -101,7 +97,7 @@ const location = useLocation();
     visibleSections["image"] ? "show" : ""
   }`}
 >
-  <img
+  <img 
     src={presidentImg}
     alt="President"
   />
@@ -116,7 +112,11 @@ const location = useLocation();
               }`}
             >
               <p>
-                “Education is the manifestation of the perfection already in man.”
+                Swami Vivekananda always encouraged students to believe in themselves and their inner strength. He said that every individual has immense potential, and success comes from awakening that power within. His famous message, “Arise, awake, and stop not till the goal is reached,” inspires students to stay focused on their goals.
+
+He believed that education is not just about earning a livelihood but about building strong character and developing the mind. Discipline, concentration, and hard work are essential for success. According to him, fear is the biggest obstacle, and students must overcome it with courage and confidence.
+
+Swami Vivekananda also taught that failures are stepping stones to success. One should never give up but keep trying with determination. He considered youth as the greatest strength of a nation and believed that dedicated, well-educated students can shape a bright future for their country.
               </p>
               <span>– Swami Vivekananda</span>
             </div>
@@ -133,25 +133,14 @@ const location = useLocation();
             <h4>President's Message</h4>
 
             <p>
-              Today, the world is moving towards globalization. Increased
-              competition among businesses has raised minimum competency levels.
-              Education is considered the foundation of an excellent career.
-            </p>
+            Today, the world is moving towards globalization. Increased competition among businesses has raised minimum competency levels of manpower. It has become almost important to generate quality and competent knowledge managers. Education is considered the foundation of an excellent career. ASIAN ACADEMY values parents' and students' concerns for quality education and excellent career. ASIAN ACADEMY provides a conducive learning environment for the fundamental growth of the student.
 
-            <p>
-              Our institution provides a conducive learning environment for
-              holistic development. We aim to nurture future leaders with
-              integrity, knowledge, and excellence.
-            </p>
-
-            <p>
-              We are committed to facilitating career development through
-              quality teaching and practical exposure.
+ASIAN ACADEMY believes that students’ career growth comes from the synergy of quality teaching and an excellent earning environment. ASIAN ACADEMY is committed to facilitating our student's career development through quality teaching. Our teaching staff and nonteaching staff are well qualified and experts in the field motivated to undertake fundamental development of and are our students. The youngest nation on the planet needs career based practical education system.
             </p>
 
             <strong>
-              Dr. Anita Sapte <br />
-              B.E (Electronics) <br />
+              Dr. Manjiri Karekar  <br />
+             Principal  <br />
               M.B.A (Marketing) <br />
               Ph.D
             </strong>

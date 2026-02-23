@@ -6,68 +6,54 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6f9;
 }
 
 /* ================= HERO SECTION ================= */
 
 .contact-hero {
   width: 100%;
-  height: 60vh;
+  height: 75vh;
+  min-height: 420px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  animation: fadeZoom 1.2s ease;
-}
-
-@keyframes fadeZoom {
-  from {
-    opacity: 0;
-    transform: scale(1.05);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.overlay {
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.3)
-  );
-  height: 100%;
-  display: flex;
   align-items: center;
-  padding-left: 80px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Light Professional Overlay */
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+}
+
+/* Hero Text */
+.overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .overlay h1 {
   color: #ffffff;
-  font-size: clamp(32px, 5vw, 52px);
+  font-size: clamp(32px, 6vw, 55px);
   font-weight: 800;
+  margin: 0;
   letter-spacing: 1px;
-  animation: slideLeft 1s ease;
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(-40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 /* ================= BREADCRUMB ================= */
 
 .breadcrumb {
-  background-color: #f00101;
+  background-color: #e11d48;
   color: #ffffff;
   padding: 14px 80px;
   font-size: 14px;
@@ -84,40 +70,27 @@ body {
   background: #ffffff;
   border-radius: 14px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-  animation: fadeUp 1.2s ease;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ================= LEFT PANEL ================= */
 
 .contact-info {
   width: 35%;
- background: #263f48;
+  background: #263f48;
   padding: 35px;
   border-radius: 12px;
   border-top: 5px solid #e11d48;
+  color: white;
 }
 
 .contact-info h2 {
   margin-bottom: 24px;
   font-size: 22px;
   font-weight: 700;
-  color: white;
 }
 
 .contact-info p {
   margin-bottom: 18px;
-  color: white;
   line-height: 1.6;
   display: flex;
   gap: 10px;
@@ -142,12 +115,14 @@ body {
   border: 1px solid #ddd;
   border-radius: 8px;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #1f3a40;
   box-shadow: 0 0 0 2px rgba(31, 58, 64, 0.15);
+  outline: none;
 }
 
 .row {
@@ -164,21 +139,43 @@ body {
 .captcha-row {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .captcha-box {
-  font-size: 28px;
+  background: #f0f0f0;
+  padding: 8px 15px;
   font-weight: bold;
-  color: #1e40af;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+
+.refresh-btn {
+  background: #1f3a40;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.refresh-btn:hover {
+  background: #dc2626;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
 }
 
 /* ================= BUTTON ================= */
 
 .contact-form button {
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 14px;
-  width: 150px;
+  width: 180px;
   background: #1f3a40;
   color: #fff;
   border: none;
@@ -192,7 +189,7 @@ body {
 .contact-form button:hover {
   background: #dc2626;
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
 }
 
 /* ================= MAP ================= */
@@ -209,6 +206,22 @@ body {
 .map-container iframe {
   width: 100%;
   height: 100%;
+  border: 0;
+}
+
+/* =================================================
+   📱 TABLET (max-width: 992px)
+================================================= */
+
+@media (max-width: 992px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
 }
 
 /* =================================================
@@ -216,8 +229,12 @@ body {
 ================================================= */
 
 @media (max-width: 768px) {
-  .overlay {
-    padding-left: 20px;
+  .contact-hero {
+    height: 55vh;
+  }
+
+  .overlay h1 {
+    font-size: 32px;
   }
 
   .breadcrumb {
@@ -225,14 +242,8 @@ body {
   }
 
   .contact-wrapper {
-    flex-direction: column;
     padding: 20px;
     margin: 40px 16px;
-  }
-
-  .contact-info,
-  .contact-form {
-    width: 100%;
   }
 
   .row {
@@ -258,6 +269,10 @@ body {
     height: 45vh;
   }
 
+  .overlay h1 {
+    font-size: 26px;
+  }
+
   .contact-info h2 {
     font-size: 20px;
   }
@@ -268,113 +283,6 @@ body {
   }
 
   .captcha-box {
-    font-size: 24px;
+    font-size: 20px;
   }
-}
-
-
-
-.captcha-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.captcha-box {
-  background: #f0f0f0;
-  padding: 8px 15px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  border-radius: 5px;
-}
-
-.refresh-btn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 6px 10px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.refresh-btn:hover {
-  background: #0056b3;
-}
-
-.error {
-  color: red;
-  margin-top: 5px;
-}
-
-
-
-.contact-hero {
-  width: 100%;
-  height: 60vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;   /* IMPORTANT */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-/* FIXED OVERLAY */
-.overlay {
-  position: absolute;   /* IMPORTANT */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0.3)
-  );
-  display: flex;
-  align-items: center;
-  padding-left: 80px;
-}
-
-/* Make text above overlay */
-.overlay h1 {
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-/* ================= HERO SECTION ================= */
-.contact-hero {
-  width: 100%;
-  height: 75vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Full black overlay */
-.contact-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-/* Text container */
-.overlay {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  text-align: center;
-}
-
-/* Text style */
-.overlay h1 {
-  color: #ffffff;
-  font-size: 55px;
-  font-weight: 800;
-  margin: 0;
 }

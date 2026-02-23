@@ -39,10 +39,7 @@ const Vision = () => {
       <div className="vision-hero">
         <div className="vision-overlay fade-down">
           <h1>Vision</h1>
-          <p>
-            <Link to="/">Home</Link> /{" "}
-            <Link to="/about">About</Link> / Vision
-          </p>
+          
         </div>
       </div>
 

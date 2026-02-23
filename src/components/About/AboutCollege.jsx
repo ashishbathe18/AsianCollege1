@@ -33,10 +33,7 @@ const AboutCollege = () => {
       <div className="about-hero">
         <div className="about-hero-overlay">
           <h1>The College</h1>
-          <p>
-            <Link to="/">Home</Link> /{" "}
-            <Link to="/about">About</Link> / The College
-          </p>
+        
         </div>
       </div>
 

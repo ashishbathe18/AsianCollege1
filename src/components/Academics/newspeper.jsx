@@ -1,85 +1,64 @@
-import React, { useEffect, useRef } from "react";
-import "./Newspeper.css";
-import notise from "../../assets/students/notise.png";
-import notise2 from "../../assets/students/notise2.png";
-import notise3 from "../../assets/students/notise3.png";
-const newsData = [
-  {
-    id: 1,
-    title: "College Students Won State Level Competition",
-    description:
-      "Our students secured first rank in the state level technical competition.",
-    date: "12 Jan 2026",
-    image: notise,
-  },
-  {
-    id: 2,
-    title: "Annual Cultural Event Featured in Newspaper",
-    description:
-      "The grand cultural event was highlighted in a leading daily newspaper.",
-    date: "5 Feb 2026",
-    image:notise2,
-  },
-  {
-    id: 3,
-    title: "NSS Camp Covered by Local Media",
-    description:
-      "Our NSS volunteers organized a successful rural development camp.",
-    date: "20 Feb 2026",
-    image: notise3,
-  },
-];
+import React, { useEffect, useState } from "react";
+import "./newspeper.css";
 
-const NewsSection = () => {
-  const cardsRef = useRef([]);
+const API = "http://localhost:5000"; // किंवा .env वापरू शकतोस
+
+export default function NewsSection() {
+  const [newsData, setNewsData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-
-    cardsRef.current.forEach((card) => {
-      if (card) observer.observe(card);
-    });
+    fetch(`${API}/api/news`)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch news");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        if (data.success && Array.isArray(data.data)) {
+          setNewsData(data.data);
+        } else {
+          setNewsData([]);
+        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching news:", err);
+        setLoading(false);
+      });
   }, []);
+
+  if (loading) {
+    return <h2 className="loading">Loading...</h2>;
+  }
 
   return (
     <section className="news-section">
-      <div className="container">
-        <h2 className="section-title">📰 News Paper Publications</h2>
+      <div className="news-container">
+        <h2 className="news-title">News Paper Publications</h2>
 
-        <div className="news-wrapper">
-          {newsData.map((news, index) => (
-            <div
-              className="news-card"
-              key={news.id}
-              ref={(el) => (cardsRef.current[index] = el)}
-            >
-              <div className="image-wrapper">
-                <img src={news.image} alt={news.title} />
-                <div className="overlay">
-                  <button className="view-btn">Read More</button>
+        <div className="news-grid">
+          {newsData.length === 0 ? (
+            <h3>No News Found</h3>
+          ) : (
+            newsData.map((item) => (
+              <div className="news-card" key={item._id}>
+                <div className="news-image">
+                  <img src={item.image} alt={item.title} />
+                </div>
+
+                <div className="news-info">
+                  <span className="news-date">
+                    {item.date?.slice(0, 10)}
+                  </span>
+                  <h3>{item.title}</h3>
                 </div>
               </div>
-
-              <div className="news-content">
-                <span className="news-date">{news.date}</span>
-                <h3>{news.title}</h3>
-                <p>{news.description}</p>
-              </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </section>
   );
-};
-
-export default NewsSection;
+}

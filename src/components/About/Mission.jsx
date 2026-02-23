@@ -38,10 +38,7 @@ const Mission = () => {
       <div className="mission-hero">
         <div className="hero-overlay">
           <h1>Mission</h1>
-          <p>
-            <Link to="/">Home</Link> /{" "}
-            <Link to="/about">About</Link> / Mission
-          </p>
+         
         </div>
       </div>
 
