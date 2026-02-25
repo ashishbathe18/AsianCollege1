@@ -134,45 +134,53 @@ At Asian College, we believe in shaping responsible citizens, confident leaders,
     {/* ================= NEWS / ANNOUNCEMENTS / UPDATES ================= */}
 <section className="triple-section">
 
-  {/* NEWS */}
-  <div className="info-box">
-    <div className="info-header">NEWS</div>
+ {/* NEWS */}
+<div className="info-box">
+  <div className="info-header">NEWS</div>
 
-    <div className="info-body">
+  <div className="info-body">
+
+    <Link to="/academics/newspeper" className="news-link">
       <div className="info-item">
-        <img src={dance} alt="" />
+        <img src={dance} alt="Annual Gathering" />
         <div>
-          <h4 >Annual Gathering 2025-26</h4>
+          <h4>Annual Gathering 2025-26</h4>
           <p>
-          Annual Gathering 2025-26 is celebrated with great Enthusiasm and support.
+            Annual Gathering 2025-26 is celebrated with great Enthusiasm and support.
           </p>
         </div>
       </div>
+    </Link>
 
+    <Link to="/academics/newspeper" className="news-link">
       <div className="info-item">
-        <img src={swami} alt="" />
+        <img src={swami} alt="Swami Vivekanand Jayanti" />
         <div>
-          <h4> Swami Vivekanand Jayanti</h4>
+          <h4>Swami Vivekanand Jayanti</h4>
           <p>
-           Swami Vivekananda was a great spiritual leader who introduced Indian philosophy and Vedanta to the Western world.
+            Swami Vivekananda was a great spiritual leader who introduced Indian philosophy and Vedanta to the Western world.
           </p>
         </div>
       </div>
+    </Link>
 
+    <Link to="/academics/newspeper" className="news-link">
       <div className="info-item">
-        <img src={bose} alt="" />
+        <img src={bose} alt="Netaji Subhash Chandra Bose Jayanti" />
         <div>
           <h4>Netaji Subhash Chandra Bose Jayanti</h4>
-          <p>Celebration of Netaji Subhash Chandra Bose Jayanti “Give me blood, and I will give you freedom,” and played a key role in leading the Indian National Army</p>
+          <p>
+            Celebration of Netaji Subhash Chandra Bose Jayanti “Give me blood, and I will give you freedom,” and played a key role in leading the Indian National Army.
+          </p>
         </div>
       </div>
-    </div>
+    </Link>
 
-  
   </div>
+</div>
 
 
-  {/* PU UPDATES */}
+  {/* SPPU UPDATES */}
   <div className="info-box p-2">
     <div className="info-header">SPPU UPDATES</div>
 

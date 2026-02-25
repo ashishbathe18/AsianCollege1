@@ -19,20 +19,20 @@ const Footer = () => {
         {/* ================= Address Section ================= */}
         <div className="footer-col">
           <h3>Address</h3>
-          <p >
+          <h6>
             Gat No.240,86, Velhe Market, Maval Chowk,<br />
             Tal. Velhe, Dist. Pune 412212
-          </p>
+          </h6>
 
           <p>
-            <strong>Contact:</strong>{" "}
+            <h3>Contact :</h3>{" "}
             <a href="tel:+919975976605">
               99759 76605 / 93226 04649
             </a>
           </p>
 
           <p>
-            <strong>Email:</strong>{" "}
+            <h3>Email :</h3>{" "}
             <a href="mailto:asiancollegevelhe@gmail.com">
               asiancollegevelhe@gmail.com
             </a>

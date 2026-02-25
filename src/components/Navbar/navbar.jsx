@@ -50,13 +50,13 @@ const Navbar = () => {
 
       {/* ===== MENU BAR ===== */}
       <nav className={`menu-bar  ${mobileOpen ? "active" : ""}`}>
-        <NavLink to="/" className="menu-btn fw-bold" onClick={handleCloseMenu}>
+        <NavLink to="/" className="menu-btn " onClick={handleCloseMenu}>
           Home
         </NavLink>
 
         {/* ABOUT DROPDOWN */}
         <div className="dropdown ">
-          <div className="menu-btn fw-bold" onClick={() => setAboutOpen(!aboutOpen)}>
+          <div className="menu-btn " onClick={() => setAboutOpen(!aboutOpen)}>
             About ▾
           </div>
 
@@ -84,7 +84,7 @@ const Navbar = () => {
 
  <NavLink 
   to="/Courses" 
-  className="menu-btn fw-bold"
+  className="menu-btn "
   onClick={handleCloseMenu}
 >
   Courses
@@ -93,7 +93,7 @@ const Navbar = () => {
         {/* STUDENTS DROPDOWN */}
         <div className="dropdown">
           <div
-            className="menu-btn fw-bold"
+            className="menu-btn "
             onClick={() => setStudentOpen(!studentOpen)}
           >
             Students ▾
@@ -110,7 +110,7 @@ const Navbar = () => {
         {/* ACTIVITIES DROPDOWN */}
         <div className="dropdown">
           <div
-            className="menu-btn fw-bold"
+            className="menu-btn "
             onClick={() => setActivityOpen(!activityOpen)}
           >
             Activities ▾
@@ -134,16 +134,16 @@ const Navbar = () => {
 
        
 
-        <NavLink to="/iqac" className="menu-btn fw-bold" onClick={handleCloseMenu}>
+        <NavLink to="/iqac" className="menu-btn " onClick={handleCloseMenu}>
           Placement
         </NavLink>
 
 
-        <NavLink to="/life" className="menu-btn fw-bold" onClick={handleCloseMenu}>
+        <NavLink to="/life" className="menu-btn " onClick={handleCloseMenu}>
           Life on Campus
         </NavLink>
 
-        <NavLink to="/contact" className="menu-btn fw-bold" onClick={handleCloseMenu}>
+        <NavLink to="/contact" className="menu-btn " onClick={handleCloseMenu}>
           Contact Us
         </NavLink>
       </nav>

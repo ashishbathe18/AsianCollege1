@@ -79,7 +79,7 @@ const NoticeBoard = () => {
 
               {/* Academic Info */}
               <div className="notice-meta">
-                {notice.year && <span>Year: {notice.year}</span>}
+                {notice.year && <span>Course Name: {notice.coursename}</span>}
                 {notice.class && <span>Class: {notice.class}</span>}
                 {notice.semester && <span>Semester: {notice.semester}</span>}
               </div>

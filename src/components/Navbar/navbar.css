@@ -54,7 +54,8 @@
    MENU BAR (Glass Effect)
 =================================*/
 .menu-bar {
-  background: rgba(255, 255, 255, 0.9);
+  /* background: rgba(215, 243, 249, 0.9); */
+  background: #1b4a58;
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
@@ -72,9 +73,10 @@
 .menu-btn {
   position: relative;
   padding: 10px 18px;
-  font-size: 14px;
-  font-weight: 500;
-   color: #263f48;
+  font-size: 17px;
+  /* font-weight: 500; */
+   /* color: #263f48; */
+   color: white;
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
@@ -97,12 +99,12 @@
 }
 
 .menu-btn:hover {
-   color: #263f48;
+   color: #bcc2c4;
 }
 
 /* Active Link */
 .menu-btn.active {
-   color: red;
+   color: #ffcc00;
   font-weight: 600;
 }
 
@@ -188,11 +190,12 @@
     text-align: center;
     border-radius: 8px;
     padding: 12px;
-    background: #f4f6f9;
+    /* background: #f4f6f9; */
+    background: #18353e;
   }
 
   .menu-btn:hover {
-    background: #ff7b00;
+    background: #f74b2c;
     color: #fff;
   }
 
