@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./nss.css";
 
+const API = import.meta.env.VITE_API_BASE_URL;
+
 const NSS = () => {
   const [nssData, setNssData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/nss")
+    fetch(`${API}/api/nss`)
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

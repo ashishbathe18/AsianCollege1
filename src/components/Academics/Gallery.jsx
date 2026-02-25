@@ -8,7 +8,7 @@ function Gallery() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-   fetch("http://localhost:5000/api/gallery")
+   fetch(`${API}/api/gallery`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success && Array.isArray(data.data)) {

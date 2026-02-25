@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./newspeper.css";
 
-const API = "http://localhost:5000"; // किंवा .env वापरू शकतोस
+const API = import.meta.env.VITE_API_BASE_URL;
 
 export default function NewsSection() {
   const [newsData, setNewsData] = useState([]);

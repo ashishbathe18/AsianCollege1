@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./placement.css";
 
+
+const API = import.meta.env.VITE_API_BASE_URL;
+
 function Placement() {
   const [placements, setPlacements] = useState([]);
   const [selectedImg, setSelectedImg] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/placements")
+    fetch(`${API}/api/placements`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Placement API Response:", data);
