@@ -22,7 +22,7 @@ import Art from "./courses/art";
 import Bsc from "./courses/sci";
 
 // Students Section
-import Students from "../../AsianCollege/src/components/Students/students";
+
 import NoticeBoard from "./components/Students/NoticeBoard";
 
 
@@ -38,6 +38,7 @@ import IQAC from "./components/IQAC/placement";
 
 import Life from "./components/Life/life";
 import Contact from "./components/contact/contact";
+import Students from "./components/Students/students";
 
 function App() {
   return (
