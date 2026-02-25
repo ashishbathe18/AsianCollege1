@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./nss.css";
+import "./Nss.css";
 
 const API = import.meta.env.VITE_API_BASE_URL;
 

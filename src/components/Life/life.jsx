@@ -1,5 +1,5 @@
 import React from "react";
-import "./Life.css";
+import "./life.css";
 
 // Banner Image
 import campusImg from "../../assets/life/life-on-campus.jpg";

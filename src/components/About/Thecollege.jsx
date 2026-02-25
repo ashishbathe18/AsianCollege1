@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "./Thecollege.css";
 
 import bgImg from "../../assets/about/image.jpg"
 import campusImg from "../../assets/about/about-campus.jpg";

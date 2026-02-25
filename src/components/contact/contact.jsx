@@ -1,11 +1,5 @@
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
-import "./Contact.css";
+import "./contact.css";
 import contactBg from "../../assets/gallery/cu3.png";
 
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Bcom.css";
+import "./bcom.css";
 import heroImg from "../../src/assets/students/courses.png";
 
 function Bcom() {
